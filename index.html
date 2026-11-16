@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhinav Weds Supriya ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#fff8e9;color:#54251f;
+ font-family:Georgia,serif;text-align:center;
+}
+.hero{
+ min-height:100vh;padding:35px 18px;
+ display:flex;flex-direction:column;justify-content:center;
+ align-items:center;
+ background:linear-gradient(#fff7e8dd,#fff7e8ed),
+ url('invitation-card.jpg') center/cover;
+}
+h1{font-size:clamp(40px,10vw,75px);font-weight:normal;
+ color:#702d32;margin:15px 0}
+h2{color:#a17a36;font-weight:normal}
+.couple{
+ width:min(90%,390px);border:5px solid #c9a65c;
+ border-radius:180px 180px 15px 15px;
+ box-shadow:0 8px 30px #9b714444;
+}
+.names{font-size:35px;margin:22px 0}
+.ornament{color:#bd9850;font-size:28px}
+.section{padding:55px 18px;max-width:900px;margin:auto}
+.card{
+ background:#fffdf7;border:1px solid #d5b46e;
+ border-radius:18px;padding:22px;margin:14px 0;
+ box-shadow:0 5px 18px #8d633522;
+}
+.events{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.date{color:#9a6d29;font-size:19px}
+button{
+ background:#6c3a29;color:white;border:0;border-radius:30px;
+ padding:13px 24px;font-size:16px;margin:10px;cursor:pointer
+}
+a{color:#80552a}
+footer{background:#54251f;color:#fff0d4;padding:30px}
+#countdown{font-size:25px;color:#946c2d}
+</style>
+</head>
+<body>
+
+<section class="hero">
+ <div class="ornament">॥ श्री गणेशाय नमः ॥</div>
+ <h2>शुभ विवाह</h2>
+ <img class="couple" src="couple.jpg" alt="Abhinav and Supriya">
+ <div class="names">Abhinav <span class="ornament">♥</span> Supriya</div>
+ <h2>Two hearts unite, two families come together</h2>
+ <p>With the blessings of our families,</p>
+ <p>we invite you to celebrate our beautiful journey of love.</p>
+ <div class="ornament">❀ ❀ ❀</div>
+ <button onclick="document.getElementById('invitation').scrollIntoView({behavior:'smooth'})">
+ Open Invitation ↓
+ </button>
+</section>
+
+<section class="section" id="invitation">
+ <h1>Wedding Celebration</h1>
+ <div class="ornament">✧ ❀ ✧</div>
+ <h2>Save the Date</h2>
+ <div id="countdown">Loading countdown...</div>
+</section>
+
+<section class="section">
+ <h1>कार्यक्रम</h1>
+ <h2>Wedding Events</h2>
+ <div class="events">
+  <div class="card">
+   <div class="ornament">🎶</div>
+   <h2>Sangeet</h2>
+   <p class="date">25 January 2027</p>
+  </div>
+  <div class="card">
+   <div class="ornament">🌿</div>
+   <h2>Mehendi</h2>
+   <p class="date">25 January 2027</p>
+  </div>
+  <div class="card">
+   <div class="ornament">🌼</div>
+   <h2>Haldi</h2>
+   <p class="date">25 January 2027</p>
+  </div>
+  <div class="card">
+   <div class="ornament">🐎</div>
+   <h2>Baraat</h2>
+   <p class="date">26 January 2027</p>
+  </div>
+  <div class="card">
+   <div class="ornament">💍</div>
+   <h2>Wedding Ceremony</h2>
+   <p class="date">26 January 2027</p>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <h1>Wedding Venue</h1>
+ <div class="card">
+  <div class="ornament">📍</div>
+  <h2>Sinclairs Retreat Dooars</h2>
+  <p>Chalsa, West Bengal</p>
+  <p>Near Chalsa Bazar</p>
+  <p>P.O. Chalsa, Dist. Jalpaiguri, West Bengal – 735206</p>
+  <a href="https://www.google.com/maps/search/?api=1&query=Sinclairs+Retreat+Dooars+Chalsa"
+  target="_blank">
+  <button>View Venue on Google Maps</button>
+  </a>
+ </div>
+</section>
+
+<section class="section">
+ <h1>With Best Wishes</h1>
+ <div class="card">
+  <h2>RSVP</h2>
+  <p><b>Punam Singh</b></p>
+  <p><a href="tel:9334007139">📞 9334007139</a></p>
+  <hr>
+  <p><b>Sanjay Singh</b></p>
+  <p><a href="tel:9431144825">📞 9431144825</a></p>
+  <div class="ornament">❀ ❀ ❀</div>
+  <h2>सादर आमंत्रित</h2>
+  <p>Your presence will make our celebration special.</p>
+ </div>
+</section>
+
+<footer>
+ <div class="ornament">♥</div>
+ <h2 style="color:#f5d99c">Abhinav Weds Supriya</h2>
+ Made with love ❤️
+</footer>
+
+<div style="position:fixed;bottom:15px;right:12px">
+ <audio id="music" src="mast-magan.mp3" loop></audio>
+ <button onclick="toggleMusic()" id="musicBtn">♫ Play Music</button>
+</div>
+
+<script>
+function toggleMusic(){
+ const m=document.getElementById('music');
+ if(m.paused){
+  m.play().then(()=>{
+   document.getElementById('musicBtn').innerText='♫ Pause Music';
+  }).catch(()=>alert('Please try playing the music again.'));
+ }else{
+  m.pause();
+  document.getElementById('musicBtn').innerText='♫ Play Music';
+ }
+}
+function countdown(){
+ const wedding=new Date('2027-01-26T00:00:00+05:30').getTime();
+ const now=Date.now();
+ const d=wedding-now;
+ if(d<=0){
+  document.getElementById('countdown').innerText='The Wedding Day is Here! ❤️';
+  return;
+ }
+ const days=Math.floor(d/86400000);
+ const hours=Math.floor(d%86400000/3600000);
+ const mins=Math.floor(d%3600000/60000);
+ const secs=Math.floor(d%60000/1000);
+ document.getElementById('countdown').innerText=
+ days+' Days '+hours+' Hours '+mins+' Minutes '+secs+' Seconds';
+}
+countdown();
+setInterval(countdown,1000);
+</script>
+</body>
+</html>
